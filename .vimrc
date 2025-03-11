@@ -11,7 +11,6 @@ set fileencoding=utf-8
 set termguicolors             " True color support
 
 set number                    " Show line numbers
-set relativenumber            " Show relative line numbers
 set cursorline                " Highlight current line
 set showcmd                  " Show incomplete commands
 set showmode                 " Show current mode
@@ -190,22 +189,3 @@ if has("autocmd")
   filetype plugin indent on
   syntax enable
 endif
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'✹',
-                \ 'Staged'    :'✚',
-                \ 'Untracked' :'✭',
-                \ 'Renamed'   :'➜',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'✗',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
-                \ 'Unknown'   :'?',
-                \ }
-
-let g:NERDTreeGitStatusUntrackedFilesMode = 'all' " a heavy feature too. default: normal
-let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourself. default: 0
-let g:NERDTreeGitStatusShowIgnored = 1 " a heavy feature may cost much more time. default: 0
-
-" Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
